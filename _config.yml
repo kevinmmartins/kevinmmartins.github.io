@@ -21,8 +21,12 @@ sass:
 title: Kevin Martins
 description: "Kevin Matheus Martins Blog"
 keywords: "blog, kevin, kevinmmartins,kevin matheus"
-url: http://kevinmmartins.github.io
+url: https://kevinmmartins.github.io
 repo: https://github.com/kevinmmartins/kevinmmartins.github.io
+
+# DISQUS
+disqus_shortname: "kevinmmartins"
+disqus_site_shortname: "kevinmmartins"
 
 # Author settings
 author:

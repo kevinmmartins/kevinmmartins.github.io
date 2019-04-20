@@ -12,6 +12,7 @@ bundle exec jekyll serve
 ## Publish
 
 rake
+rake publish
 
 ## Development
 
