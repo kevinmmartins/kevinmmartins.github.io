@@ -12,3 +12,7 @@ bundle exec jekyll serve
 ## Publish
 
 rake
+
+## Development
+
+Change to the development branch
