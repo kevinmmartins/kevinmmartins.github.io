@@ -6,13 +6,13 @@ Thanks to Nando Moreira for the theme https://nandomoreirame.github.io/end2end/
 
 ## Running
 
-bundle install
-bundle exec jekyll serve
+* bundle install
+* bundle exec jekyll serve
 
 ## Publish
 
-rake
-rake publish
+* rake
+* rake publish
 
 ## Development
 
