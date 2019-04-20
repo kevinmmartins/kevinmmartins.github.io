@@ -1,0 +1,49 @@
+# Build settings
+permalink: /blog/:year/:title/
+markdown: kramdown
+highlighter: pygments
+plugins: [jekyll-paginate-v2]
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: "/page/:num/"
+
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: Kevin Martins
+description: "Kevin Matheus Martins Blog"
+keywords: "blog, kevin, kevinmmartins,kevin matheus"
+url: http://kevinmmartins.github.io
+repo: https://github.com/kevinmmartins/kevinmmartins.github.io
+
+# Author settings
+author:
+  name: Kevin Martins
+  job: Full Stack Developer
+  bio: "A telecommunications engineer who likes to write codes"
+  thumb: /images/author.jpg
+  email: kevinmmartins@gmail.com
+  url: https://kevinmmartins.github.io
+  github: https://github.com/kevinmmartins
+  facebook: https://www.facebook.com/kevinmmartins
+  linkedin: https://www.linkedin.com/in/kevinmmartins/
+  stackoverflow: https://stackoverflow.com/users/10320232/kevin-martins
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: icons
+    title: Icons
+  - slug: blog
+    title: Blog
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
