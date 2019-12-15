@@ -16,7 +16,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.8.5)
+    jekyll (3.8.6)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -42,7 +42,7 @@ GEM
     json (2.3.0)
     kramdown (1.17.0)
     liquid (4.0.3)
-    listen (3.2.0)
+    listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
@@ -56,7 +56,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rouge (3.13.0)
+    rouge (3.14.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -70,7 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon (~> 6.0)
-  jekyll (~> 3.8.5)
+  jekyll (~> 3.8.6)
   jekyll-compose
   jekyll-feed (~> 0.13)
   jekyll-paginate-v2
