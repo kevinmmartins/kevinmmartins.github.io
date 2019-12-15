@@ -21,7 +21,7 @@ gem "json", "~> 2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "bourbon", "~>5.1"
-  gem "jekyll-feed", "~>0.12"
+  gem "jekyll-feed", "~>0.13"
   gem "jekyll-paginate-v2"
   gem "pygments.rb"
   gem "jekyll-compose"
