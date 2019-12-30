@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kevin Martins</title>
+    <description>Kevin Matheus Martins Blog</description>
+    <link>https://kevinmmartins.github.io/</link>
+    <atom:link href="https://kevinmmartins.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 30 Dec 2019 09:31:32 -0300</pubDate>
+    <lastBuildDate>Mon, 30 Dec 2019 09:31:32 -0300</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Mongo with Docker and seed</title>
+        <description>&lt;p&gt;Create a Json file with your document&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;[
+  {
+    &quot;name&quot;: &quot;Kevin Martins&quot;,
+    &quot;birthday&quot;: &quot;29 April , 1995&quot;,
+    &quot;nick&quot;: &quot;Red King&quot;,
+    &quot;age&quot;: 24
+  },
+  {
+    &quot;name&quot;: &quot;Kauan Martins&quot;,
+    &quot;birthday&quot;: &quot;02 July , 2008&quot;,
+    &quot;nick&quot;: &quot;Red as Floid&quot;,
+    &quot;age&quot;: 10
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a Dockerfile and copy your Json file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM mongo
+
+COPY init.json /init.json
+CMD mongoimport --host mongo --db reach-engine --collection users --type json --file /init.json --jsonArray
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a docker-compose.yml and build your Dockerfile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - &quot;27017:27017&quot;
+    volumes:
+      - ./data/db:/data/db
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sun, 29 Dec 2019 07:50:20 -0300</pubDate>
+        <link>https://kevinmmartins.github.io/blog/2019/mongo-docker-with-seed/</link>
+        <guid isPermaLink="true">https://kevinmmartins.github.io/blog/2019/mongo-docker-with-seed/</guid>
+        
+        
+        <category>mongo</category>
+        
+      </item>
+    
+      <item>
+        <title>Log Connexion request body</title>
+        <description>&lt;p&gt;To log Connexion request body just add the following code&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import connexion
+from flask import request
+
+app = connexion.App(__name__, specification_dir=&quot;./swagger/&quot;)
+
+
+@app.app.before_request
+def log_request_info():
+    print('Body: %s', request.get_data())
+    logger.info('Body: %s', request.get_data())
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sun, 15 Dec 2019 07:50:20 -0300</pubDate>
+        <link>https://kevinmmartins.github.io/blog/2019/log-connexion-request-body/</link>
+        <guid isPermaLink="true">https://kevinmmartins.github.io/blog/2019/log-connexion-request-body/</guid>
+        
+        
+        <category>connexion</category>
+        
+      </item>
+    
+      <item>
+        <title>Debug Foreman with RubyMine</title>
+        <description>&lt;p&gt;Open &lt;strong&gt;Debug Configurations&lt;/strong&gt; and select &lt;strong&gt;Gem Command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/20428703/70857693-418dd100-1ed2-11ea-9c84-fa675f6af361.png&quot; alt=&quot;Debug Configurations&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a new configuration like the image below&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/20428703/70857696-4f435680-1ed2-11ea-84d2-20b2f4db8f1d.png&quot; alt=&quot;New config&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Done !&lt;/p&gt;
+</description>
+        <pubDate>Sat, 14 Dec 2019 22:10:12 -0300</pubDate>
+        <link>https://kevinmmartins.github.io/blog/2019/debug-foreman-rubymine/</link>
+        <guid isPermaLink="true">https://kevinmmartins.github.io/blog/2019/debug-foreman-rubymine/</guid>
+        
+        
+        <category>foreman</category>
+        
+      </item>
+    
+      <item>
+        <title>Error with psycopg2</title>
+        <description>&lt;p&gt;Generate SQLAlchemy Models from Postgres using sqlacodegen&lt;/p&gt;
+
+&lt;p&gt;To generate the models execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sqlacodegen postgresql://user:pass@host:5432/database
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have the problem:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;ImportError: No module named 'psycopg2'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo apt-get install build-dep python-psycopg2
+pip install psycopg2
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 20 Apr 2019 15:44:52 -0300</pubDate>
+        <link>https://kevinmmartins.github.io/blog/2019/sqlacodegen-genarate-error/</link>
+        <guid isPermaLink="true">https://kevinmmartins.github.io/blog/2019/sqlacodegen-genarate-error/</guid>
+        
+        
+        <category>sqlacodegen</category>
+        
+      </item>
+    
+      <item>
+        <title>Convert JAR to bundle in ServiceMix</title>
+        <description>&lt;p&gt;Sometimes we need to add a new bundle in Servicemix being a Jar.
+Performing the conversion and installing in OSGI may not be very easy however this tutorial will help you.&lt;/p&gt;
+
+&lt;p&gt;Execute the command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./bin/servicemix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Ubunto :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;osgi:install -s wrap:file:////&quot;jar_location Ex: /lib/ojdbc6-13.jar&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Windows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;osgi:install -s wrap:file:&quot;jar location Ex: D:/lib/ojdbc6-13.jar&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Execute shutdown command, choose yes option.&lt;/p&gt;
+
+&lt;p&gt;Now your Jar will be avaliable :)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 20 Apr 2019 15:04:52 -0300</pubDate>
+        <link>https://kevinmmartins.github.io/blog/2019/convert-jar-to-bundle-servicemix/</link>
+        <guid isPermaLink="true">https://kevinmmartins.github.io/blog/2019/convert-jar-to-bundle-servicemix/</guid>
+        
+        
+        <category>servicemix</category>
+        
+      </item>
+    
+  </channel>
+</rss>
