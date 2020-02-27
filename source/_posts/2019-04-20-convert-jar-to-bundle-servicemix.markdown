@@ -7,7 +7,7 @@ image: https://svn.apache.org/repos/asf/servicemix/sandbox/images/logo-smx-tm-fe
 categories: servicemix
 ---
 Sometimes we need to add a new bundle in Servicemix being a Jar.
-Performing the conversion and installing in OSGI may not be very easy however this tutorial will help you.
+Performing the conversion and installing in OSGI may not be easy however this tutorial will help you.
 
 Execute the command:
 
@@ -15,13 +15,13 @@ Execute the command:
 ./bin/servicemix
 ```
 
-In Ubunto :
+Ubuntu :
 
 ```
 osgi:install -s wrap:file:////"jar_location Ex: /lib/ojdbc6-13.jar"
 ```
 
-In Windows:
+Windows:
 
 ```
 osgi:install -s wrap:file:"jar location Ex: D:/lib/ojdbc6-13.jar"
@@ -29,4 +29,4 @@ osgi:install -s wrap:file:"jar location Ex: D:/lib/ojdbc6-13.jar"
 
 Execute shutdown command, choose yes option.
 
-Now your Jar will be avaliable :)
+Now your Jar will be avaliable
