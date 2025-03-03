@@ -4,7 +4,8 @@
     <title>Kevin Martins</title>
     <link>https://kevinmmartins.github.io/</link>
     <description>Recent content on Kevin Martins</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language><atom:link href="https://kevinmmartins.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <atom:link href="https://kevinmmartins.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

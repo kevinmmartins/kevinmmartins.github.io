@@ -4,7 +4,8 @@
     <title>Categories on Kevin Martins</title>
     <link>https://kevinmmartins.github.io/categories/</link>
     <description>Recent content in Categories on Kevin Martins</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language><atom:link href="https://kevinmmartins.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <atom:link href="https://kevinmmartins.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
